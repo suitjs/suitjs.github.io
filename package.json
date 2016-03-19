@@ -15,7 +15,8 @@
   "homepage": "http://www.suitjs.com",
   "dependencies": {
     "node-sass": "^3.4",
-    "uglify": "^0.1"    
+    "uglify": "^0.1",
+    "bower": "^1.7.0"
   },
   "contributors": [
     "Gustavo Allebrandt <gustavoallebrandt@gmail.com"
