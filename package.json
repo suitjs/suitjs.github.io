@@ -14,9 +14,11 @@
   },
   "homepage": "http://www.suitjs.com",
   "dependencies": {
-    "bower": "^1.7.0",
-    "gulp-cli": "^1.2.0",
-    "gulp": "^3.9.0"
+    "bower": "^1.7.0",    
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-rename": "^1.2.0",
+    "del": "^2.0.0"
   },
   "contributors": [
     "Gustavo Allebrandt <gustavoallebrandt@gmail.com"

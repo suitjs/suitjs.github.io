@@ -1,0 +1,40 @@
+{
+  "name": "suitjs",  
+  "homepage": "https://github.com/suitjs/core",
+  "authors": [
+    "Eduardo Dias da Costa <eduardo@thelaborat.org>",
+	"Gustavo Allebrandt <gustavoallebrandt@gmail.com>"
+  ],
+  "description": "A comfortable MVC framework.",
+  "main": ["js/suit.js"],
+  "moduleType": "globals",
+  "keywords": [
+    "model",
+    "view",
+    "controller",
+    "haxe",
+	"typescript",
+    "mvc",
+    "front-end",
+    "javascript",
+    "framework"
+  ],
+  
+  "ignore": [	
+	"**/.*",
+    "docs/",
+    "haxe/",
+	"tools/",    
+	"node_modules/",
+	"bower_components/",
+    "typescript",			
+	"*.hxproj",
+	"*.hx",
+	"*.md",
+	"*.html",	
+	"*.json"		
+  ],
+
+  "license": "MIT",
+  "private": false
+}

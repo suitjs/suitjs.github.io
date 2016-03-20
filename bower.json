@@ -1,0 +1,20 @@
+{
+  "name": "suitjs-website",
+  "description": "Source for the SuitJS official site.",
+  "main": "",
+  "authors": [
+    "Eduardo Dias da Costa <eduardo@thelaborat.org>",
+    "Gustavo Allebrandt <gustavoallebrandt@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "suitjs",
+    "site"
+  ],
+  "dependencies": {
+    "suitjs": "^1.0.0"    
+  },
+  "homepage": "http://www.suitjs.com",
+  "moduleType": [],
+  "private": true
+}
