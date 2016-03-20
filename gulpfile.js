@@ -55,8 +55,5 @@ gulp.task("build-scss",function buildScss() {
 
 
 //Builds the website.
-gulp.task("build",["move-js","build-scss"],function build() {
-    
-    
-});
+gulp.task("build",["move-js","build-scss"],function build() { });
 
