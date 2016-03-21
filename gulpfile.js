@@ -6,6 +6,7 @@ var template = require("gulp-template");
 var runseq   = require('run-sequence');
 var fs       = require("fs");
 var _        = require("lodash");
+var proc     = require("child_process");
 
 var isDebug = false;
 
@@ -13,8 +14,8 @@ console.log("gulp> Init.");
 
 //Main Paths
 var path = {
-    src: "./source",
-    dst: "./deploy"    
+    src: "source",
+    dst: "deploy"    
 };
 
 //File Paths
@@ -73,7 +74,7 @@ gulp.task("build-scss",function buildScss() {
 gulp.task("build-html",function buildScss() {
         
     var ctx     = {};    
-    ctx.data    = require(path.html.src+"/config.json");
+    ctx.data    = require("./"+path.html.src+"/config.json");
     ctx.render  = function render(p_file) {
         var s = fs.readFileSync(path.html.src+"/"+p_file).toString();        
         var c = _.template(s);
@@ -89,5 +90,13 @@ gulp.task("build-html",function buildScss() {
 gulp.task("build",function build() {
     //Run 'clean' then asynchronously the rest    
     runseq("clean",["move-js","move-img","build-html","build-scss"]);    
+ });
+ 
+ 
+ //Publish the site in github pages
+gulp.task("publish",function build() {    
+    var p = proc.exec("git subtree push --prefix "+path.dst+" origin master",[],{silent:true});
+    p.stdout.on("data", function onProcData(data) { console.log(data); });
+    p.stderr.on("data", function onProcError(err) { console.log(err);  });
  });
 

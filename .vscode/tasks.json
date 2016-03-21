@@ -10,7 +10,7 @@
 // which compiles less to css.
 
 {
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"command": "gulp",
 	"isShellCommand": true,    
 	"tasks": [
@@ -29,6 +29,10 @@
         {
 			"taskName": "build",
             "isBuildCommand": true,
+            "args": []			
+		},
+        {
+			"taskName": "publish",            
             "args": []			
 		}
 	]

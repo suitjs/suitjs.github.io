@@ -1,1 +1,0 @@
-git subtree push --prefix deploy origin master
