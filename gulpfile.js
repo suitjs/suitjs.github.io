@@ -7,6 +7,8 @@ var runseq   = require('run-sequence');
 var fs       = require("fs");
 var _        = require("lodash");
 var proc     = require("child_process");
+//var fontgen  = require("gulp-fontgen");
+var serve    = require("gulp-serve");
 
 var isDebug = false;
 
@@ -29,8 +31,9 @@ path.font = { src: path.src+"/fonts", dst: path.dst+"/fonts" };
 var jsFiles   = gulp.src(path.js.src  +"/**/*.js");
 var scssFiles = gulp.src(path.scss.src+"/**/*.scss");
 var htmlFiles = gulp.src([path.html.src+"/**/*.html","!"+path.html.src+"/**/*.t.html"]);
-var imgFiles  = gulp.src([path.src+"/**/*.png",path.src+"/**/*.jpg",path.src+"/**/*.gif",path.src+"/**/*.svg"]);
-var fontFiles = gulp.src([path.font.src+"/**/*.css",path.font.src+"/**/*.eot",path.font.src+"/**/*.woff*",path.font.src+"/**/*.svg",path.font.src+"/**/*.ttf"]);
+var imgFiles  = gulp.src([path.src+"/**/*.{png,jpg,gif,svg}"]);
+var fontFiles = gulp.src([path.font.src+"/**/*.{css,eot,woff,woff2,svg,ttf}"]);
+//var fontFiles = gulp.src([path.font.src+"/**/*.{otf,ttf}"]);
 
 //Destination Streams
 var jsDst   = gulp.dest(path.js.dst);
@@ -54,24 +57,40 @@ function defaultTask() {
 gulp.task("?",defaultTask);
 gulp.task("default",defaultTask);
 
-//Delete the contents of deploy folder
-gulp.task("clean",function clean(){
-    return del([path.dst+"/**/*","!"+path.dst+"/CNAME*"]);
+
+//Runs a HTTP server for testing
+gulp.task("serve-run", serve({
+  root: [path.dst],
+  port: 8080  
+}));
+
+gulp.task("serve",function serveHttp(){         
+    proc.exec("serve.sh",[],function onExec(p_error,p_stdout,p_stderr) {
+        
+    });  
 });
+
+
+
+
+//Delete the contents of deploy folder
+gulp.task("clean",function clean(){ return del([path.dst+"/**/*","!"+path.dst+"/CNAME*"]); });
 
 //Move Javascript files to the deploy folder.
-gulp.task("move-js", function moveJS() {    
-    return jsFiles.pipe(jsDst);
-});
+gulp.task("move-js", function moveJS() { return jsFiles.pipe(jsDst); });
 
 //Move img files to the deploy folder.
-gulp.task("move-img", function moveImg() {    
-    return imgFiles.pipe(imgDst);
-});
+gulp.task("move-img", function moveImg() { return imgFiles.pipe(imgDst); });
 
 //Move font files to the deploy folder.
-gulp.task("move-font", function moveFont() {    
-    return fontFiles.pipe(fontDst);
+gulp.task("move-fonts", function moveFont() { return fontFiles.pipe(fontDst); });
+
+//Build font files to font deploy folder.
+gulp.task("build-fonts",function buildFonts() {
+    
+    fontFiles
+    .pipe(fontgen({ dest: path.font.dst }));    
+            
 });
 
 //Build Sass files to CSS deploy folder.
@@ -102,7 +121,7 @@ gulp.task("build-html",function buildScss() {
 //Builds the website.
 gulp.task("build",function build() {
     //Run 'clean' then asynchronously the rest    
-    runseq("clean",["move-js","move-font","move-img","build-html","build-scss"]);    
+    runseq("clean",["move-js","move-fonts","move-img","build-html","build-scss"]);    
  });
  
  

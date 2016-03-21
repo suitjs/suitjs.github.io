@@ -34,6 +34,10 @@
         {
 			"taskName": "publish",            
             "args": []			
+		},
+        {
+			"taskName": "serve",                                    
+            "args": []			
 		}
 	]
 }
