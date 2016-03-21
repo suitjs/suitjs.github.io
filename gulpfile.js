@@ -3,6 +3,7 @@ var del      = require("del");
 var sass     = require("gulp-sass");
 var rename   = require("gulp-rename");
 var template = require("gulp-template");
+var runseq   = require('run-sequence');
 
 var isDebug = false;
 
@@ -70,5 +71,8 @@ gulp.task("build-html",function buildScss() {
 });
 
 //Builds the website.
-gulp.task("build",["move-js","build-html","build-scss"],function build() { });
+gulp.task("build",function build() {
+    //Run 'clean' then asynchronously the rest    
+    runseq("clean",["move-js","build-html","build-scss"]);    
+ });
 
