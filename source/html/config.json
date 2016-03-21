@@ -1,8 +1,7 @@
 {
-    "g":{
-        
-      "title": "SuitJS",
-      "favicon": "http://www.suitjs.com/favicon.png"  
+    "g": {              
+        "title": "SuitJS",
+        "favicon": "http://www.suitjs.com/favicon.png"
     },
     
     "index": {
