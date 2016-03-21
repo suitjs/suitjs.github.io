@@ -31,7 +31,7 @@ var htmlDst = gulp.dest(path.html.dst);
 
 //Delete the contents of deploy folder
 gulp.task("clean",function clean(){
-    return del(path.dst);
+    return del([path.dst+"/**/*","!"+path.dst+"/CNAME*"]);
 })
 
 //Move Javascript files to the deploy folder.
