@@ -95,9 +95,9 @@ gulp.task("build",function build() {
  
  //Publish the site in github pages
 gulp.task("publish",function build() {
-    proc.execSync("git add -A");    
-    proc.execSync("git commit -a -m [vscode-publish-task]");    
-    proc.execSync("git push");    
-    proc.execSync("git subtree push --prefix "+path.dst+" origin master");    
+    proc.execSync("git add -A",[],{silent:true});    
+    proc.execSync("git commit -a -m [vscode-publish-task]",[],{silent:true});    
+    proc.execSync("git push",[],{silent:true});    
+    proc.execSync("git subtree push --prefix "+path.dst+" origin master",[],{silent:true});    
  });
 

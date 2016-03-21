@@ -10,7 +10,7 @@
 // which compiles less to css.
 
 {
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"command": "gulp",
 	"isShellCommand": true,    
 	"tasks": [
