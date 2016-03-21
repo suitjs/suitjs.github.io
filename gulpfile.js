@@ -36,19 +36,29 @@ var scssDst = gulp.dest(path.scss.dst);
 var htmlDst = gulp.dest(path.html.dst);
 var imgDst  = gulp.dest(path.img.dst);
 
+//Just shows the help
+function defaultTask() {
+    console.log("clean      - Clear all files from [./"+path.dst+"]");
+    console.log("move-js    - Moves JS files from [./"+path.js.src+"] to [./"+path.js.dst+"]");
+    console.log("move-img   - Moves Image files from [./"+path.img.src+"] to [./"+path.img.dst+"]");
+    console.log("build-scss - Build Scss files from [./"+path.scss.src+"] to [./"+path.scss.dst+"]");
+    console.log("build-html - Build Html files from [./"+path.html.src+"] to [./"+path.html.dst+"]");
+    console.log("build      - Builds all project");
+    console.log("publish    - Deploy the project to Github pages");
+}
+
+//Helps with the gulp task commands.
+gulp.task("?",defaultTask);
+gulp.task("default",defaultTask);
+
 //Delete the contents of deploy folder
 gulp.task("clean",function clean(){
     return del([path.dst+"/**/*","!"+path.dst+"/CNAME*"]);
-})
+});
 
 //Move Javascript files to the deploy folder.
 gulp.task("move-js", function moveJS() {    
     return jsFiles.pipe(jsDst);
-});
-
-//Move HTML files to the deploy folder.
-gulp.task("move-html", function moveHTML() {    
-    return htmlFiles.pipe(htmlDst);
 });
 
 //Move img files to the deploy folder.
