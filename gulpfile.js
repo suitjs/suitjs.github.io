@@ -100,12 +100,9 @@ gulp.task("publish",function build() {
     function onProcData(data) { console.log(data); }
     function onProcError(err) { console.log(err);  }
     
-    proc.execSync("git add -A",[],{silent:true});
-    
-    proc.execSync("git commit -a -m vscode-publish-task",[],{silent:true});
-    
-    proc.execSync("git push",[],{silent:true});
-    
+    proc.execSync("git add -A",[],{silent:true});    
+    proc.execSync("git commit -a -m vscode-publish-task",[],{silent:true});    
+    proc.execSync("git push",[],{silent:true});    
     proc.execSync("git subtree push --prefix "+path.dst+" origin master",[],{silent:true});
     
  });
