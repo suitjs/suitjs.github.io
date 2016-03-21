@@ -1,7 +1,8 @@
 {
-    "global":{
+    "g":{
         
-      "title": "SuitJS - Be comfortable"  
+      "title": "SuitJS",
+      "favicon": "http://www.suitjs.com/favicon.png"  
     },
     
     "index": {

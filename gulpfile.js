@@ -19,16 +19,19 @@ var path = {
 path.js   = { src: path.src+"/js",   dst: path.dst+"/js" };
 path.scss = { src: path.src+"/scss", dst: path.dst+"/css" };
 path.html = { src: path.src+"/html", dst: path.dst };
+path.img  = { src: path.src, dst: path.dst };
 
 //Source Streams
 var jsFiles   = gulp.src(path.js.src  +"/**/*.js");
 var scssFiles = gulp.src(path.scss.src+"/**/*.scss");
 var htmlFiles = gulp.src(path.html.src+"/**/*.html");
+var imgFiles  = gulp.src([path.src+"/**/*.png",path.src+"/**/*.jpg",path.src+"/**/*.gif"]);
 
 //Destination Streams
 var jsDst   = gulp.dest(path.js.dst);
 var scssDst = gulp.dest(path.scss.dst);
 var htmlDst = gulp.dest(path.html.dst);
+var imgDst  = gulp.dest(path.img.dst);
 
 //Delete the contents of deploy folder
 gulp.task("clean",function clean(){
@@ -43,6 +46,11 @@ gulp.task("move-js", function moveJS() {
 //Move HTML files to the deploy folder.
 gulp.task("move-html", function moveHTML() {    
     return htmlFiles.pipe(htmlDst);
+});
+
+//Move img files to the deploy folder.
+gulp.task("move-img", function moveImg() {    
+    return imgFiles.pipe(imgDst);
 });
 
 //Build Sass files to CSS deploy folder.
@@ -73,6 +81,6 @@ gulp.task("build-html",function buildScss() {
 //Builds the website.
 gulp.task("build",function build() {
     //Run 'clean' then asynchronously the rest    
-    runseq("clean",["move-js","build-html","build-scss"]);    
+    runseq("clean",["move-js","move-img","build-html","build-scss"]);    
  });
 
