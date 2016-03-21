@@ -1,6 +1,8 @@
+@import "global";
+
 .main {
     .top {
-        background-color: #f00;
+        background-color: $bkg;
     }
     
     .bottom {

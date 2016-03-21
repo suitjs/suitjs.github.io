@@ -23,18 +23,21 @@ path.js   = { src: path.src+"/js",   dst: path.dst+"/js" };
 path.scss = { src: path.src+"/scss", dst: path.dst+"/css" };
 path.html = { src: path.src+"/html", dst: path.dst };
 path.img  = { src: path.src, dst: path.dst };
+path.font = { src: path.src+"/fonts", dst: path.dst+"/fonts" };
 
 //Source Streams
 var jsFiles   = gulp.src(path.js.src  +"/**/*.js");
 var scssFiles = gulp.src(path.scss.src+"/**/*.scss");
 var htmlFiles = gulp.src([path.html.src+"/**/*.html","!"+path.html.src+"/**/*.t.html"]);
 var imgFiles  = gulp.src([path.src+"/**/*.png",path.src+"/**/*.jpg",path.src+"/**/*.gif",path.src+"/**/*.svg"]);
+var fontFiles = gulp.src([path.font.src+"/**/*.css",path.font.src+"/**/*.eot",path.font.src+"/**/*.woff*",path.font.src+"/**/*.svg",path.font.src+"/**/*.ttf"]);
 
 //Destination Streams
 var jsDst   = gulp.dest(path.js.dst);
 var scssDst = gulp.dest(path.scss.dst);
 var htmlDst = gulp.dest(path.html.dst);
 var imgDst  = gulp.dest(path.img.dst);
+var fontDst = gulp.dest(path.font.dst);
 
 //Just shows the help
 function defaultTask() {
@@ -66,16 +69,16 @@ gulp.task("move-img", function moveImg() {
     return imgFiles.pipe(imgDst);
 });
 
+//Move font files to the deploy folder.
+gulp.task("move-font", function moveFont() {    
+    return fontFiles.pipe(fontDst);
+});
+
 //Build Sass files to CSS deploy folder.
-gulp.task("build-scss",function buildScss() {    
+gulp.task("build-scss",function buildScss() {
     
     scssFiles
     .pipe(sass.sync().on("error", sass.logError))
-    .pipe(scssDst);
-    
-    scssFiles
-    .pipe(sass.sync({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(rename({suffix: ".min"}))
     .pipe(scssDst);
             
 });
@@ -99,7 +102,7 @@ gulp.task("build-html",function buildScss() {
 //Builds the website.
 gulp.task("build",function build() {
     //Run 'clean' then asynchronously the rest    
-    runseq("clean",["move-js","move-img","build-html","build-scss"]);    
+    runseq("clean",["move-js","move-font","move-img","build-html","build-scss"]);    
  });
  
  
