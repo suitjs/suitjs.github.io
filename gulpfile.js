@@ -4,6 +4,8 @@ var sass     = require("gulp-sass");
 var rename   = require("gulp-rename");
 var template = require("gulp-template");
 var runseq   = require('run-sequence');
+var fs       = require("fs");
+var _        = require("lodash");
 
 var isDebug = false;
 
@@ -24,8 +26,8 @@ path.img  = { src: path.src, dst: path.dst };
 //Source Streams
 var jsFiles   = gulp.src(path.js.src  +"/**/*.js");
 var scssFiles = gulp.src(path.scss.src+"/**/*.scss");
-var htmlFiles = gulp.src(path.html.src+"/**/*.html");
-var imgFiles  = gulp.src([path.src+"/**/*.png",path.src+"/**/*.jpg",path.src+"/**/*.gif"]);
+var htmlFiles = gulp.src([path.html.src+"/**/*.html","!"+path.html.src+"/**/*.t.html"]);
+var imgFiles  = gulp.src([path.src+"/**/*.png",path.src+"/**/*.jpg",path.src+"/**/*.gif",path.src+"/**/*.svg"]);
 
 //Destination Streams
 var jsDst   = gulp.dest(path.js.dst);
@@ -69,11 +71,16 @@ gulp.task("build-scss",function buildScss() {
 
 //Build Template files to HTML deploy folder.
 gulp.task("build-html",function buildScss() {
-    
-    var htmlConfig = require(path.html.src+"/config.json");    
-    
+        
+    var ctx     = {};    
+    ctx.data    = require(path.html.src+"/config.json");
+    ctx.render  = function render(p_file) {
+        var s = fs.readFileSync(path.html.src+"/"+p_file).toString();        
+        var c = _.template(s);
+        return c(ctx);        
+    };    
     htmlFiles
-    .pipe(template(htmlConfig))
+    .pipe(template(ctx))
     .pipe(htmlDst);
     
 });

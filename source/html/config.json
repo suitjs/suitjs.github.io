@@ -1,10 +1,25 @@
-{
-    "g": {              
-        "title": "SuitJS",
-        "favicon": "http://www.suitjs.com/favicon.png"
+{    
+    
+    "meta": {
+        "title":        "SuitJS",
+        "favicon":      "http://www.suitjs.com/favicon.png",
+        "description":  "SuitJS a comfortable framework.",
+		"keyword":      "javascript,framework,mvc,suitjs,haxe,typescript,indexeddb",
+        "og": {
+		    "title":        "SuitJS",
+		    "type":         "website",
+		    "image":        "http://www.suitjs.com/img/logo-suitjs.svg?v=2",
+		    "site_name":    "SuitJS",
+		    "url":          "http://www.suitjs.com/"
+		}
+                        
     },
     
-    "index": {
+    "tool": {        
+        "analytics": "UA-75143185-1"   
+    }, 
+    
+    "home": {
         
     }
     
