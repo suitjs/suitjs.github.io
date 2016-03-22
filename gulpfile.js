@@ -66,7 +66,7 @@ gulp.task("serve", serve({
 
 
 //Delete the contents of deploy folder
-gulp.task("clean",function clean(){ return del([path.dst+"/**/*","!"+path.dst+"/CNAME*"]); });
+gulp.task("clean",function clean(){ return del([path.dst+"/**/*","!"+path.dst+"/{CNAME*,/docs,/docs/**/*}"]); });
 
 //Move Javascript files to the deploy folder.
 gulp.task("move-js", function moveJS() { return jsFiles.pipe(jsDst); });
