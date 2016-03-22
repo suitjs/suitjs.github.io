@@ -1,1 +1,1 @@
-gulp serve-run
+gulp serve

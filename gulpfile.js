@@ -59,18 +59,10 @@ gulp.task("default",defaultTask);
 
 
 //Runs a HTTP server for testing
-gulp.task("serve-run", serve({
+gulp.task("serve", serve({
   root: [path.dst],
   port: 8080  
 }));
-
-gulp.task("serve",function serveHttp(){         
-    proc.exec("serve.sh",[],function onExec(p_error,p_stdout,p_stderr) {
-        
-    });  
-});
-
-
 
 
 //Delete the contents of deploy folder
