@@ -2,7 +2,7 @@
     
     "meta": {
         "title":        "SuitJS",
-        "favicon":      "http://suitjs.com/favicon.png",
+        "favicon":      "favicon.png",
         "description":  "SuitJS a comfortable framework.",
 		"keyword":      "javascript,framework,mvc,suitjs,haxe,typescript,indexeddb",
         "og": {
