@@ -5,5 +5,6 @@ Official site repository.
 * Clone/Pull the repository.
 * `init.sh`
 * `gulp build`
+* Make sure your Git user is setup and stored.
 * `gulp publish` 
 
