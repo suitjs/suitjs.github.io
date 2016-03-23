@@ -13,11 +13,7 @@
     
     <meta property="og:title" content="SuitJS - Core"/>
     <meta property="og:type" content="website"/>
-<<<<<<< HEAD
     <meta property="og:image" content="http://suitjs.com/img/logo-og-big.png"/>
-=======
-    <meta property="og:image" content="http://www.suitjs.com/img/logo-suitjs.svg?v=2"/>
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
     <meta property="og:site_name" content="SuitJS - Core"/>
     <meta property="og:url" content="http://suitjs.com/docs/core/"/>
     
@@ -34,11 +30,7 @@
     
     
     <script>
-<<<<<<< HEAD
     var config = {"monospaceLinks":true,"cleverLinks":true,"applicationName":"SuitJS - Core","navigationImage":"http://www.suitjs.com/img/logo-64.png","linenums":true,"disqus":"suitjs","googleAnalytics":"UA-75143185-1","default":{"outputSourceFiles":true},"openGraph":{"title":"SuitJS - Core","type":"website","image":"http://suitjs.com/img/logo-og-big.png","site_name":"SuitJS - Core","url":"http://suitjs.com/docs/core/"},"meta":{"title":"SuitJS - Core","description":"Core classes for the SuitJS framework.","keyword":"javascript,framework,mvc,suitjs,haxe,typescript"},"link":{"favicon":"http://suitjs.com/favicon.png"}};
-=======
-    var config = {"monospaceLinks":true,"cleverLinks":true,"applicationName":"SuitJS - Core","navigationImage":"http://www.suitjs.com/img/logo-64.png","linenums":true,"disqus":"suitjs","googleAnalytics":"UA-75143185-1","default":{"outputSourceFiles":true},"openGraph":{"title":"SuitJS - Core","type":"website","image":"http://www.suitjs.com/img/logo-suitjs.svg?v=2","site_name":"SuitJS - Core","url":"http://suitjs.com/docs/core/"},"meta":{"title":"SuitJS - Core","description":"Core classes for the SuitJS framework.","keyword":"javascript,framework,mvc,suitjs,haxe,typescript"},"link":{"favicon":"http://suitjs.com/favicon.png"}};
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
     </script>
     
 
@@ -354,12 +346,7 @@
 <li>Simple communication flow between Views and Controllers.</li>
 <li>Fast methods for download and upload of data.</li>
 </ul>
-<<<<<<< HEAD
 <h1>Install</h1><h4>Download</h4><ul>
-=======
-<h1>Install</h1><hr>
-<h4>Download</h4><ul>
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
 <li>Download either the <code>suitjs.js</code> or <code>suitjs.min.js</code> sources.</li>
 <li>Add the tag <code>&lt;script src=&quot;js/suit.js&quot;&gt;&lt;/script&gt;</code></li>
 </ul>
@@ -372,12 +359,7 @@
 <h4>CDN</h4><ul>
 <li>TBD</li>
 </ul>
-<<<<<<< HEAD
 <h1>Usage</h1><p>After adding the script tag, the <code>Suit</code> global variable will be available.<br>Your application workflow will be centered in <code>Controller</code> instances. </p>
-=======
-<h1>Usage</h1><hr>
-<p>After adding the script tag, the <code>Suit</code> global variable will be available.<br>Your application workflow will be centered in <code>Controller</code> instances. </p>
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
 <h4>Hello World</h4><p>Given the HTML.</p>
 <pre class="prettyprint source lang-html"><code>&lt;div n='content'>
     &lt;button n='button'>Click&lt;/button>
@@ -405,33 +387,21 @@ var simpleController = {
 };
 
 //Adds the Controller to the pool.
-<<<<<<< HEAD
 Suit.controller.add(simpleController);</code></pre><h4>View</h4><p>The first step in the project is to organize page Elements which are relevant.<br>The ones with important roles are defined as <strong>Views</strong>.</p>
 <p>Use the <code>n</code> attribute in tags that should be considered <strong>View</strong> instances.</p>
 <pre class="prettyprint source lang-html"><code>  &lt;!-- regular layout element -->
-=======
-Suit.controller.add(simpleController);</code></pre><h4>View</h4><p>The first step in the project is to organize page Elements which are relevant.<br>The ones with important roles are defined <strong>Views</strong>.</p>
-<p>Use the <code>n</code> attribute in tags that should be considered <strong>View</strong> instances.</p>
-<pre class="prettyprint source lang-hmtl"><code>  &lt;!-- regular layout element -->
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
   &lt;div>
     &lt;!-- View -->
     &lt;div n='panel'>
         ...
-<<<<<<< HEAD
         &lt;!-- View -->
-=======
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
         &lt;div n='title'>Panel&lt;/div>
     &lt;/div>
     &lt;p>Text&lt;/p>
     &lt;!-- View -->
     &lt;div n='footer'>
         ...
-<<<<<<< HEAD
         &lt;!-- View -->
-=======
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
         &lt;a n='link'>Link&lt;/a>
     &lt;/div>    
   &lt;/div></code></pre><p> These elements can later be manipulated using the <code>Suit.view</code> class.  </p>
@@ -454,11 +424,7 @@ Suit.model.data(&quot;content&quot;);       //returns {title: &quot;Title&quot;,
 Suit.model.data(&quot;content.title&quot;); //returns &quot;Title&quot;
 Suit.model.data(&quot;content.name&quot;);  //returns &quot;John&quot;
 //Set
-<<<<<<< HEAD
 Suit.model.data(&quot;content&quot;,{title: &quot;New Title&quot;, name: &quot;Carl&quot;});  //returns {title: &quot;New Title&quot;, name: &quot;Carl&quot;}</code></pre><p>We can easily avoid the hassle of reading [HTML, Input, Form]Elements and extracting their data.</p>
-=======
-Suit.model.data(&quot;content&quot;,{title: &quot;New Title&quot;, name: &quot;Carl&quot;});  //returns {title: &quot;New Title&quot;, name: &quot;Carl&quot;}</code></pre><p>We can easily avoid the hassle of reading {HTML, Input, Form}Elements and extracting their data.</p>
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
 <p>For more detailed information on <strong>Model</strong> features.  Check the <strong><a target="_blank" href="http://suitjs.com/docs/core/Suit.model.html">documentation</a></strong>.</p>
 <h4>Controller</h4><p>Now that we can fetch our Views and get/set their data, the last step is to wire up our application.<br>The Controller instance offers a way easily handle both DOMEvents and in-application communications.  </p>
 <p>Controllers are responsible for handling:</p>
@@ -552,15 +518,8 @@ Suit.request.create(&quot;POST&quot;,&quot;http://webservice.com/&quot;,function
 }, { data: &quot;content&quot;, index: 10 }); //Object data will pass thru Json.stringify().
 //Check the docs for the allowed data types that can be sent.</code></pre><p>Also, there are several shortcut methods to <strong>load/upload</strong> data using <strong>GET/POST</strong> and receiving data in <strong>different data formats</strong>.  </p>
 <p>For more detailed information on <strong>Request</strong> features.  Check the <strong><a target="_blank" href="http://suitjs.com/docs/core/Suit.request.html">documentation</a></strong>.</p>
-<<<<<<< HEAD
 <h1>Documentation</h1><p>For in depth information of the API, visit the <strong><a target="_blank" href="http://www.suitjs.com/docs/core/">documentation</a></strong>. </p>
 <h1>Examples</h1><p>Usage examples can be found at <strong><a target="_blank" href="http://codepen.io/collection/XOyEpq/">CodePen</a></strong>.</p></article>
-=======
-<h1>Documentation</h1><hr>
-<p>For in depth information of the API, visit the <strong><a target="_blank" href="http://www.suitjs.com/docs/core/">documentation</a></strong>. </p>
-<h1>Examples</h1><hr>
-<p>Usage examples can be found at <strong><a target="_blank" href="http://codepen.io/collection/XOyEpq/">CodePen</a></strong>.</p></article>
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
     </section>
 
 
@@ -577,11 +536,7 @@ Suit.request.create(&quot;POST&quot;,&quot;http://webservice.com/&quot;,function
         
 
         <footer>
-<<<<<<< HEAD
             Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Mar 23 2016 15:39:47 GMT-0300 (E. South America Standard Time)
-=======
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Mar 23 2016 04:18:06 GMT-0300 (Hora oficial do Brasil)
->>>>>>> 98acd615b4c541ce750a280c79a89fd85fbb769d
         </footer>
     </div>
 </div>
