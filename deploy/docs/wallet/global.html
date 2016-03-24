@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SuitJS - Wallet</title>
+    
+    <meta name="description" content="Keep your valuables well stored." />
+    
+        <meta name="keywords" content="javascript,framework,mvc,suitjs,haxe,typescript,localforage,indexedb,store" />
+        <meta name="keyword" content="javascript,framework,mvc,suitjs,haxe,typescript,localforage,indexedb,store" />
+    
+    
+    
+    <meta property="og:title" content="SuitJS - Wallet"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://suitjs.com/img/logo-og-big.png"/>
+    <meta property="og:site_name" content="SuitJS - Wallet"/>
+    <meta property="og:url" content="http://suitjs.com/docs/wallet/"/>
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
+    <link rel="icon" type="image/png" href="http://suitjs.com/favicon.png">
+    
+    
+    <script>
+    var config = {"monospaceLinks":true,"cleverLinks":true,"applicationName":"SuitJS - Wallet","navigationImage":"http://www.suitjs.com/img/logo-64.png","linenums":true,"disqus":"suitjs","googleAnalytics":"UA-75143185-1","default":{"outputSourceFiles":true},"openGraph":{"title":"SuitJS - Wallet","type":"website","image":"http://suitjs.com/img/logo-og-big.png","site_name":"SuitJS - Wallet","url":"http://suitjs.com/docs/wallet/"},"meta":{"title":"SuitJS - Wallet","description":"Keep your valuables well stored.","keyword":"javascript,framework,mvc,suitjs,haxe,typescript,localforage,indexedb,store"},"link":{"favicon":"http://suitjs.com/favicon.png"}};
+    </script>
+    
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', config.googleAnalytics]);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+<body>
+<div id="wrap" class="clearfix">
+    
+<div class="navigation">
+
+    <div style="text-align: center; margin-top: 5px;">
+        <img src="http://www.suitjs.com/img/logo-64.png" alt="SuitJS - Wallet" style="display: inline">
+    </div>
+
+    <h3 class="applicationName"><a href="index.html">SuitJS - Wallet</a></h3>
+
+    <div class="search">
+        <input id="search" type="text" class="form-control input-sm" placeholder="Search Documentations">
+    </div>
+    <ul class="list">
+    
+        <li class="item" data-name="Wallet">
+            <span class="title">
+                <a href="Wallet.html">Wallet</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="Wallet.context"><a href="Wallet.html#.context">context</a></li>
+            
+                <li data-name="Wallet.database"><a href="Wallet.html#.database">database</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="Wallet.clear"><a href="Wallet.html#.clear">clear</a></li>
+            
+                <li data-name="Wallet.destroy"><a href="Wallet.html#.destroy">destroy</a></li>
+            
+                <li data-name="Wallet.exists"><a href="Wallet.html#.exists">exists</a></li>
+            
+                <li data-name="Wallet.get"><a href="Wallet.html#.get">get</a></li>
+            
+                <li data-name="Wallet.init"><a href="Wallet.html#.init">init</a></li>
+            
+                <li data-name="Wallet.iterate"><a href="Wallet.html#.iterate">iterate</a></li>
+            
+                <li data-name="Wallet.key"><a href="Wallet.html#.key">key</a></li>
+            
+                <li data-name="Wallet.keys"><a href="Wallet.html#.keys">keys</a></li>
+            
+                <li data-name="Wallet.length"><a href="Wallet.html#.length">length</a></li>
+            
+                <li data-name="Wallet.remove"><a href="Wallet.html#.remove">remove</a></li>
+            
+                <li data-name="Wallet.set"><a href="Wallet.html#.set">set</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+    <div class="main">
+        <h1 class="page-title" data-filename="global.html">Global</h1>
+        
+
+
+
+<section>
+    
+<header>
+    <h2>
+    
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+        
+        
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+        
+        
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+        
+        <dl>
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="WalletCallback">
+            
+            WalletCallback<span class="signature">(p_result, p_error)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a href="g__development_project_web_thelab_suitjs_wallet_js_wallet.doc.js.html">js/wallet.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_wallet_js_wallet.doc.js.html#line77">line 77</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Callback called when the LocalForage operations is finished.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>p_result</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                
+                <p>Data returned from the operation.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>p_error</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Error</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        <span class="nullable">nullable</span>
+                    
+                        
+                    
+                
+                <p>Error handler if any.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="WalletIterationCallback">
+            
+            WalletIterationCallback<span class="signature">(p_key, p_value, p_index)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a href="g__development_project_web_thelab_suitjs_wallet_js_wallet.doc.js.html">js/wallet.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_wallet_js_wallet.doc.js.html#line84">line 84</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Callback called when the LocalForage operations is finished.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>p_key</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Key string.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>p_value</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Value.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>p_index</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Index of the iteration. If finished or any error occurred returns negative.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        Boolean
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>If <code>false</code> is returned the iteration stops.</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+    
+    
+</dd>
+
+            </dl>
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+
+        
+        <!-- disqus code -->
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a target="_blank" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a target="_blank" href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <!-- // disqus code -->
+        
+
+        <footer>
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Mar 24 2016 18:54:48 GMT-0300 (E. South America Standard Time)
+        </footer>
+    </div>
+</div>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
