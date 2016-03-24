@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SuitJS - Wallet</title>
+    
+    <meta name="description" content="Keep your valuables well stored." />
+    
+        <meta name="keywords" content="javascript,framework,mvc,suitjs,haxe,typescript,localforage,indexedb,store" />
+        <meta name="keyword" content="javascript,framework,mvc,suitjs,haxe,typescript,localforage,indexedb,store" />
+    
+    
+    
+    <meta property="og:title" content="SuitJS - Wallet"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://suitjs.com/img/logo-og-big.png"/>
+    <meta property="og:site_name" content="SuitJS - Wallet"/>
+    <meta property="og:url" content="http://suitjs.com/docs/wallet/"/>
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
+    <link rel="icon" type="image/png" href="http://suitjs.com/favicon.png">
+    
+    
+    <script>
+    var config = {"monospaceLinks":true,"cleverLinks":true,"applicationName":"SuitJS - Wallet","navigationImage":"http://www.suitjs.com/img/logo-64.png","linenums":true,"disqus":"suitjs","googleAnalytics":"UA-75143185-1","default":{"outputSourceFiles":true},"openGraph":{"title":"SuitJS - Wallet","type":"website","image":"http://suitjs.com/img/logo-og-big.png","site_name":"SuitJS - Wallet","url":"http://suitjs.com/docs/wallet/"},"meta":{"title":"SuitJS - Wallet","description":"Keep your valuables well stored.","keyword":"javascript,framework,mvc,suitjs,haxe,typescript,localforage,indexedb,store"},"link":{"favicon":"http://suitjs.com/favicon.png"}};
+    </script>
+    
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', config.googleAnalytics]);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+<body>
+<div id="wrap" class="clearfix">
+    
+<div class="navigation">
+
+    <div style="text-align: center; margin-top: 5px;">
+        <img src="http://www.suitjs.com/img/logo-64.png" alt="SuitJS - Wallet" style="display: inline">
+    </div>
+
+    <h3 class="applicationName"><a href="index.html">SuitJS - Wallet</a></h3>
+
+    <div class="search">
+        <input id="search" type="text" class="form-control input-sm" placeholder="Search Documentations">
+    </div>
+    <ul class="list">
+    
+        <li class="item" data-name="Wallet">
+            <span class="title">
+                <a href="Wallet.html">Wallet</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="Wallet.context"><a href="Wallet.html#.context">context</a></li>
+            
+                <li data-name="Wallet.database"><a href="Wallet.html#.database">database</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="Wallet.clear"><a href="Wallet.html#.clear">clear</a></li>
+            
+                <li data-name="Wallet.destroy"><a href="Wallet.html#.destroy">destroy</a></li>
+            
+                <li data-name="Wallet.exists"><a href="Wallet.html#.exists">exists</a></li>
+            
+                <li data-name="Wallet.get"><a href="Wallet.html#.get">get</a></li>
+            
+                <li data-name="Wallet.init"><a href="Wallet.html#.init">init</a></li>
+            
+                <li data-name="Wallet.iterate"><a href="Wallet.html#.iterate">iterate</a></li>
+            
+                <li data-name="Wallet.key"><a href="Wallet.html#.key">key</a></li>
+            
+                <li data-name="Wallet.keys"><a href="Wallet.html#.keys">keys</a></li>
+            
+                <li data-name="Wallet.length"><a href="Wallet.html#.length">length</a></li>
+            
+                <li data-name="Wallet.remove"><a href="Wallet.html#.remove">remove</a></li>
+            
+                <li data-name="Wallet.set"><a href="Wallet.html#.set">set</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+    <div class="main">
+        <h1 class="page-title" data-filename="index.html">Index</h1>
+        
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article class="readme"><p><a target="_blank" href="http://www.suitjs.com/"><img src="http://www.suitjs.com/img/logo-suitjs.svg?v=2" width="256" alt="SuitJS"></a></p>
+<h1>Wallet</h1><p>Keep your valuables well stored.  </p>
+<p>Wallet is a tool that wraps Mozilla's <strong><a target="_blank" href="http://mozilla.github.io/localForage/">LocalForage</a></strong> to simplify <strong><a target="_blank" href="http://www.html5rocks.com/en/tutorials/offline/storage/">offline storage</a></strong>.  </p>
+<ul>
+<li>Easy Key-Value pairs based API<ul>
+<li>Uses <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/API/IndexedDB_API">IndexedDB</a> in the &quot;backstage&quot;</li>
+</ul>
+</li>
+<li>Allows the storing of all types of Javascript objects<ul>
+<li>Object</li>
+<li>String</li>
+<li>Number</li>
+<li>ArrayBuffer</li>
+</ul>
+</li>
+<li>Accepts either <code>function(){}</code> callbacks and SuitJS <a target="_blank" href="http://suitjs.com/docs/core/global.html#ControllerNotification">ControllerNotifications</a></li>
+<li>Offers database contexts to avoid data collision between applications</li>
+</ul>
+<h1>Install</h1><h4>Download</h4><ul>
+<li>Download either the <code>wallet.js</code> or <code>wallet.min.js</code> sources.</li>
+<li>Add the tag <code>&lt;script src=&quot;js/suitjs/wallet.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<h4>Bower</h4><ul>
+<li>Wallet is available as bower package.</li>
+<li>Run <code>bower install suitjs-wallet</code></li>
+<li>It will install all script versions.</li>
+<li>Add the tag <code>&lt;script src=&quot;bower_components/suitjs-wallet/js/wallet.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<h4>CDN</h4><ul>
+<li>TBD</li>
+</ul>
+<h1>Usage</h1><p>After adding the script tag, the <code>Wallet</code> global variable will be available.  </p>
+<h4>Hello World</h4><pre class="prettyprint source lang-js"><code>//Before the 'load' event, call 'Wallet.init' and set your database name.
+//Try to make this name unique because it may collide with other apps using 'Wallet'.
+Wallet.init(&quot;my-unique-database&quot;);
+
+//Not obligatory.
+//But a context can be set and allow different kinds of profiling.
+Wallet.context = &quot;debug&quot;;
+
+//Set some value.
+//Internally the 'key' used will be 'debug.key'
+Wallet.set(&quot;key&quot;,{ &quot;some&quot;: &quot;data&quot;, &quot;num&quot;: 10}, function(p_data,p_error) {
+
+    if(p_error!=null) { console.error(p_error); return; } //something went wrong.
+    console.log(p_data);                                  //object we just stored
+});
+
+
+/*...*/
+
+Wallet.get(&quot;key&quot;,function(p_data,p_error) {
+
+    if(p_error!=null) { console.error(p_error); return; } //something went wrong.
+    console.log(p_data);                                  //{ &quot;some&quot;: &quot;data&quot;, &quot;num&quot;: 10}
+});</code></pre><p>Then, it is also possible to integrate <code>Wallet</code> into SuitJS applications.<br>Make sure <code>SuitJS</code> exists in the application context.</p>
+<pre class="prettyprint source lang-js"><code>//Setup Wallet as above
+
+//Define a simple controller.
+Suit.controller.add({
+    on: function(n) {
+        switch(n.path) {
+
+            case &quot;storage-update@set&quot;:   console.log(n.data); /*{ &quot;some&quot;: &quot;data&quot;, &quot;num&quot;: 10}*/ break;
+            case &quot;storage-update@error&quot;: console.log(n.data); /*Error*/                        break;            
+
+            case &quot;storage-fetch@get&quot;:   console.log(n.data); /*{ &quot;some&quot;: &quot;data&quot;, &quot;num&quot;: 10}*/ break;
+            case &quot;storage-fetch@error&quot;: console.log(n.data); /*Error*/                        break;
+        }        
+    }
+});
+
+//Call the same methods but use String as 'callback'.
+//They will do a Suit.controller.dispatch()
+
+Wallet.set(&quot;key&quot;,{ &quot;some&quot;: &quot;data&quot;, &quot;num&quot;: 10},&quot;storage-update&quot;);
+
+Wallet.get(&quot;key&quot;,&quot;storage-fetch&quot;);</code></pre><h1>Documentation</h1><p>For in depth information of the API, visit the <strong><a target="_blank" href="http://www.suitjs.com/docs/wallet/">documentation</a></strong>. </p>
+<h1>Examples</h1><p>Usage examples can be found at <strong><a target="_blank" href="http://codepen.io/collection/XOyEpq/">CodePen</a></strong>.</p></article>
+    </section>
+
+
+
+
+
+
+        
+        <!-- disqus code -->
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a target="_blank" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a target="_blank" href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <!-- // disqus code -->
+        
+
+        <footer>
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Mar 24 2016 18:54:48 GMT-0300 (E. South America Standard Time)
+        </footer>
+    </div>
+</div>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
