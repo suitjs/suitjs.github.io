@@ -6,10 +6,14 @@ Official site repository.
 * Clone/Pull the repository.
 * Make sure to have NodeJS and NPM.
 * `npm run init`
-* Make sure your Git user is setup and stored.
+
+## Build/Run
+
+* `gulp build`
 * `gulp serve`
 * **[Localhost](http://localhost:8080)**
 
 ## Publish
+* Make sure your Git user is setup and stored.
 * `gulp publish` 
 
