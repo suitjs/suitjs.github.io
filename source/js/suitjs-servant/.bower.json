@@ -1,0 +1,54 @@
+{
+  "name": "suitjs-servant",
+  "homepage": "https://github.com/suitjs/servant",
+  "authors": [
+    "Eduardo Dias da Costa <eduardo@thelaborat.org>",
+    "Gustavo Allebrandt <gustavoallebrandt@gmail.com>"
+  ],
+  "description": "Optimize your heavy work with a Servant's help.",
+  "main": [
+    "js/servant.js"
+  ],
+  "moduleType": "globals",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "haxe",
+    "suitjs",
+    "framework",
+    "mvc",
+    "requestAnimationFrame",
+    "update",
+    "timer",
+    "frontend",
+    "task",
+    "manager"
+  ],
+  "ignore": [
+    "**/.*",
+    "docs/",
+    "haxe/",
+    "typescript/",
+    "node_modules/",
+    "bower_components/",
+    "source/",
+    "LICENSE.md",
+    "README.md",
+    "*.json",
+    "*.bat",
+    "*.sh",
+    "*.hxproj",
+    "*.hxml"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "33078736e31dc8f5ef6f8b622a6c870027b8c54c"
+  },
+  "_source": "git://github.com/suitjs/servant.git",
+  "_target": "^1.0.0",
+  "_originalSource": "suitjs-servant"
+}

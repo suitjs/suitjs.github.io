@@ -25,6 +25,10 @@
     "run-sequence": "^1.0.0",
     "lodash": "^3.1.0"    
   },
+   "scripts": {
+    "init":         "npm install && npm install -g gulp-cli && bower install && gulp build",
+    "serve":        "gulp serve"    
+  },
   "contributors": [
     "Gustavo Allebrandt <gustavoallebrandt@gmail.com"
   ]
