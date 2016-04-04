@@ -95,7 +95,7 @@ gulp.task("build-scss",function buildScss() {
 });
 
 //Build Template files to HTML deploy folder.
-gulp.task("build-html",function buildScss() {
+gulp.task("build-html",function buildHtml() {
         
     var ctx     = {};    
     ctx.data    = require("./"+path.html.src+"/config.json");

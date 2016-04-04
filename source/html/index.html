@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">    
     <title><%= data.meta.title %></title>    
-<%= render("head.t.html") %>    
+<%= render("template/head.t.html") %>    
 </head>
 <body>
     
     <link rel="stylesheet" href="css/home.css">
     
-    <script src="js/analytics.js"></script>
-    
-    <div class="content">
-        <section class="home">
-        
-        <div class="logo"></div>    
-        <p class="caption">A comfortable framework.</p>    
-        
-        </section>
-        
-        <section class="about">
-        
-        </section> 
-        
-        <section class="footer">
-        
-        </section>                
-    </div>    
-        
+    <div class="v content">
+        <div class="hx header">
+            <div class="hx margin"></div>            
+            <div class="hx ll">
+                <img class="logo" src="img/home/logo-header.png" alt="SuitJS">                
+                <span>About</span>
+                <span>Getting Started</span>
+                <span>Documentation</span>
+                <span>Examples</span>
+                <span>Plugins</span>
+                <div class="hx"></div>
+                <img class="github" src="img/home/logo-header-github.png" alt="Github">
+            </div>
+            <div class="hx margin"></div>            
+        </div>
+        <div class="hx start pattern-paper-20">    
+            <div class="hx margin"></div>
+            <div class="vx lc">
+                <img class="logo" src="img/home/logo-start.png" alt="SuitJS">
+                <div class="buttons hx lc">
+                    <div class="button-start">Get Started</div>
+                    <div class="button-start">Download</div>                    
+                </div>
+            </div>
+                          
+            <div class="hx margin"></div>
+        </div>
+        <div class="hx about pattern-paper-10">
+            <div class="hx margin"></div>
+            <div class="hx">
+                <div>
+                    <div class="title">About SuitJS</div>
+                    <div class="hx lc cols">
+                        <div class="col">                        
+                                <p class="col-title">Easy to Use</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus aliquam accumsan. Vestibulum nec fringilla mauris. Vestibulum ut dignissim urna, a aliquet dui. Phasellus mattis sapien et felis lacinia ornare. Maecenas sit amet volutpat orci. Sed ultricies facilisis diam sit amet tristique. Sed aliquet finibus felis vitae volutpat. Cras consectetur vel felis eu posuere. Phasellus tristique tellus mi, vel vestibulum sem rutrum at.</p>                                                
+                        </div>
+                        <div class="col">                        
+                                <p class="col-title">Easy to Use</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus aliquam accumsan. Vestibulum nec fringilla mauris. Vestibulum ut dignissim urna, a aliquet dui. Phasellus mattis sapien et felis lacinia ornare. Maecenas sit amet volutpat orci. Sed ultricies facilisis diam sit amet tristique. Sed aliquet finibus felis vitae volutpat. Cras consectetur vel felis eu posuere. Phasellus tristique tellus mi, vel vestibulum sem rutrum at.</p>                                                
+                        </div>
+                        <div class="col">                        
+                                <p class="col-title">Easy to Use</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus aliquam accumsan. Vestibulum nec fringilla mauris. Vestibulum ut dignissim urna, a aliquet dui. Phasellus mattis sapien et felis lacinia ornare. Maecenas sit amet volutpat orci. Sed ultricies facilisis diam sit amet tristique. Sed aliquet finibus felis vitae volutpat. Cras consectetur vel felis eu posuere. Phasellus tristique tellus mi, vel vestibulum sem rutrum at.</p>                                                
+                        </div>                                                                              
+                    </div>
+                </div>
+            </div>
+            <div class="hx margin"></div>
+        </div>
+        <div class="hx start pattern-paper-10">
+            
+        </div>
+        <div class="hx footer pattern-paper-30">
+            
+        </div>
+    </div>
+
+<%= render("template/footer.t.html") %>    
 </body>
 </html>
