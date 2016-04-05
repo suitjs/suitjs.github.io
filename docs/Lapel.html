@@ -823,7 +823,7 @@
     
         
         <div class="tag-source">
-            <a href="suitjs-lapel_js_lapel.doc.js.html">source\suitjs-lapel\js/lapel.doc.js</a>, <a href="suitjs-lapel_js_lapel.doc.js.html#line6">line 6</a>
+            <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html">source/lapel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html#line6">line 6</a>
         </div>
         
     </div>
@@ -961,7 +961,7 @@
     
         
         <div class="tag-source">
-            <a href="suitjs-lapel_js_lapel.doc.js.html">source\suitjs-lapel\js/lapel.doc.js</a>, <a href="suitjs-lapel_js_lapel.doc.js.html#line135">line 135</a>
+            <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html">source/lapel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html#line130">line 130</a>
         </div>
         
     </div>
@@ -1095,23 +1095,26 @@
     
     
     
-        <h5>Example</h5>
+        <h5>Examples</h5>
         
+        <p class="code-caption">Given the script</p>
+    
 
     
-    <pre class="prettyprint"><code><p>In the page javascript.</p>
-<pre class="prettyprint source lang-js"><code>var c = {
- tag: &quot;custom-component&quot;,
- src: &quot;&lt;div class='custom'>&lt;/div>&quot;,
- init: function(p_element) {`
-     p_element.textContent = &quot;I'm Here.&quot;;
- },
- inner: false
-};
-Lapel.add(c);</code></pre><p>The original HTML have the custom tag. </p>
-<pre class="prettyprint source lang-html"><code>&lt;custom-component>Original Text&lt;/custom-component></code></pre><p>Then after init.</p>
-<pre class="prettyprint source lang-html"><code>&lt;div class='custom'>I'm Here.&lt;/div></code></pre><p>If <code>inner</code> is true, then the result would be.</p>
-<pre class="prettyprint source lang-html"><code>&lt;custom-component>&lt;div class='custom'>I'm Here.&lt;/div>&lt;/component></code></pre></code></pre>
+    <pre class="prettyprint"><code><br> var c = {<br> tag: &quot;custom-component&quot;,<br> src: &quot;&lt;div class='custom'&gt;&lt;/div&gt;&quot;,<br> init: function(p_element) {<br>     p_element.textContent = &quot;I'm Here.&quot;;<br> },<br> inner: false<br>};<br>Lapel.add(c);</p></code></pre>
+    
+
+        <p class="code-caption">Add the custom tag in the HTML</p>
+    
+
+    
+    <pre class="prettyprint"><code><pre class="prettyprint source lang-html"><code>&lt;custom-component>Original Text&lt;/custom-component>
+
+&lt;!-- After Init -->
+&lt;div class='custom'>I'm Here.&lt;/div>
+
+&lt;!-- If `inner` is true, then the result will be. -->
+&lt;custom-component>&lt;div class='custom'>I'm Here.&lt;/div>&lt;/component></code></pre></code></pre>
     
 
     
@@ -1128,7 +1131,7 @@ Lapel.add(c);</code></pre><p>The original HTML have the custom tag. </p>
     
         
         <div class="tag-source">
-            <a href="suitjs-lapel_js_lapel.doc.js.html">source\suitjs-lapel\js/lapel.doc.js</a>, <a href="suitjs-lapel_js_lapel.doc.js.html#line89">line 89</a>
+            <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html">source/lapel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html#line89">line 89</a>
         </div>
         
     </div>
@@ -1358,7 +1361,7 @@ console.log(bt); //&lt;button class='custom' name=&quot;cbutton&quot;>Click Me!&
     
         
         <div class="tag-source">
-            <a href="suitjs-lapel_js_lapel.doc.js.html">source\suitjs-lapel\js/lapel.doc.js</a>, <a href="suitjs-lapel_js_lapel.doc.js.html#line63">line 63</a>
+            <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html">source/lapel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_documentation_source_lapel.doc.js.html#line63">line 63</a>
         </div>
         
     </div>
@@ -1496,8 +1499,8 @@ console.log(bt); //&lt;button class='custom' name=&quot;cbutton&quot;>Click Me!&
         
 
     
-    <pre class="prettyprint"><code><p>//Define a simple component.<br>Lapel.add({<br> tag: &quot;my-component&quot;,<br> src: &quot;<div class='my-component'></div>&quot;<br>});</p>
-<p>var c = Lapel.find(&quot;my-component&quot;);<br>console.log(c); //{ tag: 'my-component', src: &quot;<div class='my-component'></div>&quot; }</p></code></pre>
+    <pre class="prettyprint"><code><p>//Define a simple component.<br>Lapel.add({<br> tag: &quot;my-component&quot;,<br> src: &quot;&lt;div class='my-component'&gt;&lt;/div&gt;&quot;<br>});</p>
+<p>var c = Lapel.find(&quot;my-component&quot;);<br>console.log(c); //{ tag: 'my-component', src: &quot;&lt;div class='my-component'&gt;&lt;/div&gt;&quot; }</p></code></pre>
     
 
     
@@ -1526,7 +1529,7 @@ console.log(bt); //&lt;button class='custom' name=&quot;cbutton&quot;>Click Me!&
         
 
         <footer>
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Mar 30 2016 16:33:39 GMT-0300 (E. South America Standard Time)
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Apr 05 2016 01:33:49 GMT-0300 (E. South America Standard Time)
         </footer>
     </div>
 </div>
