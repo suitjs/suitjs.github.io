@@ -12,11 +12,11 @@
     "site"
   ],
   "dependencies": {
-    "suitjs": "^1.0.0",
-    "suitjs-wallet": "^1.0.0",
+    "suitjs":         "^1.0.0",
+    "suitjs-wallet":  "^1.0.0",
     "suitjs-servant": "^1.0.0",
-    "suitjs-reel": "^1.0.0",
-    "suitjs-lapel": "^1.0.0"    
+    "suitjs-reel":    "^1.0.0",
+    "suitjs-lapel":   "^1.0.0"    
   },
   "homepage": "http://www.suitjs.com",
   "moduleType": [],

@@ -1,14 +1,16 @@
-var gulp     = require("gulp");
 var del      = require("del");
-var sass     = require("gulp-sass");
-var rename   = require("gulp-rename");
-var template = require("gulp-template");
-var runseq   = require('run-sequence');
+var gulp     = require("gulp");
+var runseq   = require("run-sequence");
 var fs       = require("fs");
 var _        = require("lodash");
 var proc     = require("child_process");
-//var fontgen  = require("gulp-fontgen");
+var sass     = require("gulp-sass");
+var rename   = require("gulp-rename");
+var template = require("gulp-template");
+var connect  = require("gulp-connect");
 var serve    = require("gulp-serve");
+//var fontgen  = require("gulp-fontgen");
+
 
 var isDebug = false;
 
@@ -59,11 +61,15 @@ gulp.task("default",defaultTask);
 
 
 //Runs a HTTP server for testing
-gulp.task("serve", serve({
-  root: [path.dst],
-  port: 8080  
-}));
-
+gulp.task("serve", function() {
+    
+  connect.server({
+    root:       path.dst,
+    port:       8080,
+    livereload: true
+  });
+  
+});
 
 //Delete the contents of deploy folder
 gulp.task("clean",function clean(){ return del([path.dst+"/**/*","!"+path.dst+"/{CNAME*,/docs,/docs/**/*}"]); });
@@ -113,7 +119,7 @@ gulp.task("build-html",function buildHtml() {
 //Builds the website.
 gulp.task("build",function build() {
     //Run 'clean' then asynchronously the rest    
-    runseq("clean",["move-js","move-fonts","move-img","build-html","build-scss"]);    
+    runseq("clean",["move-js","move-fonts","move-img","build-html","build-scss"]);
  });
  
  

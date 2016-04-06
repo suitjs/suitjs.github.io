@@ -1,8 +1,7 @@
 {
   "name": "suitjs-website",
   "version": "1.0.0",
-  "description": "Source for the SuitJS official site.", 
-  
+  "description": "Source for the SuitJS official site.",
   "repository": {
     "type": "git",
     "url": "https://github.com/suitjs/suitjs.github.io"
@@ -14,20 +13,21 @@
   },
   "homepage": "http://www.suitjs.com",
   "dependencies": {
-    "bower": "^1.7.0",    
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-template": "^3.0.0",
-    "gulp-fontgen": "^0.1.0",
-    "gulp-serve": "^1.2.0",
+    "bower": "^1.7.0",
     "del": "^2.0.0",
-    "run-sequence": "^1.0.0",
-    "lodash": "^3.1.0"    
+    "gulp": "^3.9.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-fontgen": "^0.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-serve": "^1.2.0",
+    "gulp-template": "^3.0.0",
+    "lodash": "^3.1.0",
+    "run-sequence": "^1.0.0"
   },
-   "scripts": {
-    "init":         "npm install && npm install -g gulp-cli && bower install && gulp build",
-    "serve":        "gulp serve"    
+  "scripts": {
+    "init": "npm install && npm install -g gulp-cli && bower install && gulp build",
+    "serve": "gulp serve"
   },
   "contributors": [
     "Gustavo Allebrandt <gustavoallebrandt@gmail.com"

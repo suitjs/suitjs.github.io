@@ -4,16 +4,19 @@
 
 $bkg_header:   #7f0d15;
 $bkg_start:    #be252a;
-$bkg_footer:   #323232;
+$bkg_footer:   #353535;
 $bkg_getstart: #e5e5e5;
 $bkg_about:    #f7f7f7;
 
 $color_header: #ea5960;
+$color_footer: #686868;
 $button_start_color: #7f0d15;
 
 $color_title_about:     #ba272f;
 $color_col_title_about: #818181;
-$color_col_text_about: #7e7e7e;
+$color_col_text_about:  #7e7e7e;
 
 
 p { margin: 0px; }
+
+a { text-decoration: none; }
