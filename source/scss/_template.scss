@@ -1,0 +1,272 @@
+*,
+*:before,
+*:after {
+	box-sizing:border-box;
+}
+::selection {
+	color:#fff;
+	background:$color-red-light; 
+}
+::-moz-selection {
+	color:#fff;
+	background:$color-red-light;
+}
+
+body {
+	font-family:'Roboto Slab Light', 'Arial', 'Helvetica', sans-serif;
+	font-size:14px;
+	line-height:1.5;
+	color:$color-gray-light;
+}
+
+a {
+	color:$color-red-light;
+	text-decoration:none;
+	
+	&:hover {
+		text-decoration:underline;
+	}
+}
+
+.wrap {
+	width:100%;
+	max-width:1200px;
+	margin:0 auto;
+	position:relative;
+	padding:0 40px;
+}
+
+header {
+	display:block;
+	width:100%;
+	height:50px;
+	background:#7f0d15 url(../img/header/bg.png) repeat-x bottom center;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	overflow:hidden;
+	
+	.wrap {
+		height:100%;
+	
+		a {
+			color:#e95a60;
+		}
+
+		h1 {
+			display:block;
+			width:67px;
+			height:24px;
+			margin-top:12px;
+			float:left;
+			
+			a {
+				display:block;
+				width:100%;
+				height:100%;
+				text-indent:-9999px;
+				overflow:hidden;
+				background:url(../img/header/logo-suit.png) no-repeat center center / contain;
+			}
+		}
+		nav {
+			display:table;
+			width:calc(100% - 67px);
+			height:50px;
+			padding-left:5px;
+			float:left;
+			
+			ul {
+				display:table-cell;
+				vertical-align:middle;
+				margin-left:5px;
+				font-family:'Roboto Slab Regular';
+				
+				li {
+					display:block;
+					margin:0 8px 0;
+					position:relative;
+					float:left;
+					
+					&.github {
+						width:30px;
+						float:right;
+						margin:0;
+						
+						a {
+							display:block;
+							width:30px;
+							height:30px;
+							background:url(../img/header/logo-github.png) no-repeat center center / contain;
+							text-indent:-9999px;
+							position:absolute;
+							top:-4px;
+							left:0;
+							overflow:hidden;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+section {
+	position:relative;
+	width:100%;
+	padding:40px 0;
+	background:url(../img/shared/pattern-light.png) repeat center center;
+
+	&:nth-child(even) {
+		background-image:url(../img/shared/pattern-dark.png);
+	}
+
+	h1 {
+		font-size:2.714em;
+		font-family:'Roboto Slab Light';
+		color:$color-red-light;
+		margin-bottom:10px;
+	}
+}
+
+footer {
+	display:block;
+	width:100%;
+	height:150px;
+	background:$color-gray-dark url(../img/footer/bg.png) repeat-x bottom center;
+	overflow:hidden;
+	
+	.wrap {
+		height:100%;
+	
+		a {
+			color:#676767;
+		}
+
+		a.logo {
+			display:block;
+			width:140px;
+			height:50px;
+			margin-top:50px;
+			text-indent:-9999px;
+			overflow:hidden;
+			background:url(../img/footer/logo-suit.png) no-repeat center center / contain;
+			float:left;
+		}
+		nav {
+			display:table;
+			height:100%;
+			float:right;
+			
+			ul {
+				display:table-cell;
+				vertical-align:middle;
+				font-family:'Roboto Slab Regular';
+				
+				li {
+					display:inline-block;
+					height:1rem;
+					margin:0 8px 0;
+					position:relative;
+					
+					&.github {
+						width:30px;
+						margin-left:10px;
+
+						a {
+							display:block;
+							width:30px;
+							height:30px;
+							background:url(../img/footer/logo-github.png) no-repeat center center / contain;
+							text-indent:-9999px;
+							overflow:hidden;
+							position:absolute;
+							top:50%;
+							margin-top:-12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- MEDIAQUERY : MEDIUM SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+@media #{$query-tablet} {
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- MEDIAQUERY : SMALL SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+@media #{$query-phone} {
+
+	body {
+		font-size:12px;
+	}
+
+	.wrap {
+		padding:0 20px;
+	}
+
+	header {
+		position:relative;
+
+		.wrap {
+			nav {
+				ul {
+					li {
+						&:not(.github) {
+							display:none;
+						}
+						&.github {
+							height:50px;
+
+							a {
+								top:50%;
+								margin-top:-15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section {
+		padding:20px 0;
+
+		h1 {
+			font-size:2em;
+		}
+	}
+
+
+	footer {
+		.wrap {
+			a.logo {
+				width:100px;
+			}
+			nav {
+				ul {
+					text-align:right;
+
+					li {
+						display:block;
+						margin:.1em 0;
+
+						&.github {
+							display:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
