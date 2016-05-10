@@ -1,0 +1,369 @@
+/*
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Marlboro Regular';
+  src: url("../fonts/robotoslab/marlboro/marlboro-webfont.eot");
+  src: url("../fonts/robotoslab/marlboro/marlboro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab/marlboro/marlboro-webfont.woff2") format("woff2"), url("../fonts/robotoslab/marlboro/marlboro-webfont.woff") format("woff"), url("../fonts/robotoslab/marlboro/marlboro-webfont.ttf") format("truetype"), url("../fonts/robotoslab/marlboro/marlboro-webfont.svg#marlbororegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Slab Bold';
+  src: url("../fonts/robotoslab/robotoslab-bold-webfont.eot");
+  src: url("../fonts/robotoslab/robotoslab-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab/robotoslab-bold-webfont.woff2") format("woff2"), url("../fonts/robotoslab/robotoslab-bold-webfont.woff") format("woff"), url("../fonts/robotoslab/robotoslab-bold-webfont.ttf") format("truetype"), url("../fonts/robotoslab/robotoslab-bold-webfont.svg#roboto_slabbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Slab Light';
+  src: url("../fonts/robotoslab/robotoslab-light-webfont.eot");
+  src: url("../fonts/robotoslab/robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab/robotoslab-light-webfont.woff2") format("woff2"), url("../fonts/robotoslab/robotoslab-light-webfont.woff") format("woff"), url("../fonts/robotoslab/robotoslab-light-webfont.ttf") format("truetype"), url("../fonts/robotoslab/robotoslab-light-webfont.svg#roboto_slablight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Slab Regular';
+  src: url("../fonts/robotoslab/robotoslab-regular-webfont.eot");
+  src: url("../fonts/robotoslab/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab/robotoslab-regular-webfont.woff2") format("woff2"), url("../fonts/robotoslab/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab/robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto_slabthin';
+  src: url("../fonts/robotoslab/robotoslab-thin-webfont.eot");
+  src: url("../fonts/robotoslab/robotoslab-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab/robotoslab-thin-webfont.woff2") format("woff2"), url("../fonts/robotoslab/robotoslab-thin-webfont.woff") format("woff"), url("../fonts/robotoslab/robotoslab-thin-webfont.ttf") format("truetype"), url("../fonts/robotoslab/robotoslab-thin-webfont.svg#roboto_slabthin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Colors */
+/* Media Queries */
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+::selection {
+  color: #fff;
+  background: #b82329; }
+
+::-moz-selection {
+  color: #fff;
+  background: #b82329; }
+
+body {
+  font-family: 'Roboto Slab Light', 'Arial', 'Helvetica', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #808080; }
+
+a {
+  color: #b82329;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px; }
+
+header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: #7f0d15 url(../img/header/bg.png) repeat-x bottom center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden; }
+  header .wrap {
+    height: 100%; }
+    header .wrap a {
+      color: #e95a60; }
+    header .wrap h1 {
+      display: block;
+      width: 67px;
+      height: 24px;
+      margin-top: 12px;
+      float: left; }
+      header .wrap h1 a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(../img/header/logo-suit.png) no-repeat center center/contain; }
+    header .wrap nav {
+      display: table;
+      width: calc(100% - 67px);
+      height: 50px;
+      padding-left: 5px;
+      float: left; }
+      header .wrap nav ul {
+        display: table-cell;
+        vertical-align: middle;
+        margin-left: 5px;
+        font-family: 'Roboto Slab Regular'; }
+        header .wrap nav ul li {
+          display: block;
+          margin: 0 8px 0;
+          position: relative;
+          float: left; }
+          header .wrap nav ul li.github {
+            width: 30px;
+            float: right;
+            margin: 0; }
+            header .wrap nav ul li.github a {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url(../img/header/logo-github.png) no-repeat center center/contain;
+              text-indent: -9999px;
+              position: absolute;
+              top: -4px;
+              left: 0;
+              overflow: hidden; }
+
+section {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background: url(../img/shared/pattern-light.png) repeat center center; }
+  section:nth-child(even) {
+    background-image: url(../img/shared/pattern-dark.png); }
+  section h1 {
+    font-size: 2.714em;
+    font-family: 'Roboto Slab Light';
+    color: #b82329;
+    margin-bottom: 10px; }
+
+footer {
+  display: block;
+  width: 100%;
+  height: 150px;
+  background: #333 url(../img/footer/bg.png) repeat-x bottom center;
+  overflow: hidden; }
+  footer .wrap {
+    height: 100%; }
+    footer .wrap a {
+      color: #676767; }
+    footer .wrap a.logo {
+      display: block;
+      width: 140px;
+      height: 50px;
+      margin-top: 50px;
+      text-indent: -9999px;
+      overflow: hidden;
+      background: url(../img/footer/logo-suit.png) no-repeat center center/contain;
+      float: left; }
+    footer .wrap nav {
+      display: table;
+      height: 100%;
+      float: right; }
+      footer .wrap nav ul {
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'Roboto Slab Regular'; }
+        footer .wrap nav ul li {
+          display: inline-block;
+          height: 1rem;
+          margin: 0 8px 0;
+          position: relative; }
+          footer .wrap nav ul li.github {
+            width: 30px;
+            margin-left: 10px; }
+            footer .wrap nav ul li.github a {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url(../img/footer/logo-github.png) no-repeat center center/contain;
+              text-indent: -9999px;
+              overflow: hidden;
+              position: absolute;
+              top: 50%;
+              margin-top: -12px; }
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- MEDIAQUERY : MEDIUM SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- MEDIAQUERY : SMALL SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px; }
+  .wrap {
+    padding: 0 20px; }
+  header {
+    position: relative; }
+    header .wrap nav ul li:not(.github) {
+      display: none; }
+    header .wrap nav ul li.github {
+      height: 50px; }
+      header .wrap nav ul li.github a {
+        top: 50%;
+        margin-top: -15px; }
+  section {
+    padding: 20px 0; }
+    section h1 {
+      font-size: 2em; }
+  footer .wrap a.logo {
+    width: 100px; }
+  footer .wrap nav ul {
+    text-align: right; }
+    footer .wrap nav ul li {
+      display: block;
+      margin: .1em 0; }
+      footer .wrap nav ul li.github {
+        display: none; } }
+
+#home {
+  display: table;
+  height: 500px;
+  background: #b82329 url(../img/home/pattern.png) repeat center center;
+  margin-top: 50px; }
+  #home .wrap {
+    display: table-cell;
+    vertical-align: middle; }
+    #home .wrap .logo {
+      width: 100%;
+      height: 230px;
+      max-width: 600px;
+      margin: 0 auto;
+      background: url(../img/home/logo-suit.png) no-repeat center center/contain; }
+      #home .wrap .logo h1,
+      #home .wrap .logo h2 {
+        display: inline-block;
+        text-indent: -9999px;
+        overflow: hidden; }
+    #home .wrap .buttons {
+      margin-top: 50px;
+      text-align: center; }
+      #home .wrap .buttons a {
+        display: inline-block;
+        font-family: 'Roboto Slab Bold';
+        background: #7f0d15;
+        border-radius: 5px;
+        padding: 12px 35px;
+        margin: 0 10px;
+        font-size: 1.285em;
+        text-decoration: none; }
+        #home .wrap .buttons a:hover {
+          box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+          background: #760c13; }
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- MEDIAQUERY : MEDIUM SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- MEDIAQUERY : SMALL SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  #home {
+    height: auto;
+    margin-top: 0;
+    padding-top: 0; }
+    #home .wrap .logo {
+      height: 180px;
+      height: calc(60vw);
+      min-height: calc(150px);
+      max-height: calc(300px);
+      max-width: 100%;
+      margin: 40px 0;
+      background-image: url(../img/home/logo-suit-icon.png); }
+    #home .wrap .buttons {
+      margin-top: 0;
+      margin-bottom: 0; }
+      #home .wrap .buttons a {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px 0; }
+        #home .wrap .buttons a:first-child {
+          margin-top: 0; }
+        #home .wrap .buttons a:last-child {
+          margin-bottom: 0; } }
+
+#about .wrap .columns {
+  overflow: hidden; }
+  #about .wrap .columns .column {
+    width: 31.6%;
+    margin: 0 1.25%;
+    float: left; }
+    #about .wrap .columns .column h2 {
+      font-family: 'Roboto Slab Bold';
+      font-size: 1.285em; }
+    #about .wrap .columns .column p {
+      margin-top: 10px;
+      text-align: justify; }
+    #about .wrap .columns .column:first-child {
+      margin-left: 0; }
+    #about .wrap .columns .column:last-child {
+      margin-right: 0; }
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- MEDIAQUERY : MEDIUM SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- MEDIAQUERY : SMALL SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  #about .wrap .columns .column {
+    width: 100%;
+    margin: 0 0 20px 0;
+    float: none; }
+    #about .wrap .columns .column:last-child {
+      margin-bottom: 0; } }
+
+#getting-started p {
+  margin-bottom: 20px; }
+
+#getting-started iframe {
+  width: 100%;
+  background: #fff; }
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- MEDIAQUERY : MEDIUM SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- MEDIAQUERY : SMALL SCREEN ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */

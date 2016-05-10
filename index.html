@@ -1,122 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">    
-    <title>SuitJS</title>    
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description"        content="SuitJS a comfortable framework." />    
-    <meta name="keywords"           content="javascript,framework,mvc,suitjs,haxe,typescript,indexeddb" />
-    <meta property="og:title"       content="SuitJS"/>
-    <meta property="og:type"        content="website"/>
-    <meta property="og:image"       content="http://suitjs.com/img/logo-og-big.png"/>
-    <meta property="og:site_name"   content="SuitJS"/>
-    <meta property="og:url"         content="http://suitjs.com/"/>
-    <meta property="og:description" content="SuitJS a comfortable framework."/>    
-    <link rel="stylesheet" href="fonts/marlboro/stylesheet.css" type="text/css" charset="utf-8" />
-        
-</head>
-<body>
-    
-    <link rel="stylesheet" href="css/home.css">
-    
-    <div class="v content">
-        <div class="hx header">
-            <div class="margin"></div>            
-            <div class="hx ll">
-                <img class="logo" src="img/home/logo-header.png" alt="SuitJS">                
-                <a class="button-header" href="#">About</a>
-                <a class="button-header" href="#">Getting Started</a>
-                <a class="button-header" href="#">Documentation</a>
-                <a class="button-header" href="#">Examples</a>
-                <a class="button-header" href="#">Plugins</a>
-                <div class="hx"></div>
-                <img class="github" src="img/home/logo-header-github.png" alt="Github">
-            </div>
-            <div class="margin"></div>            
-        </div>
-        <div class="hx start pattern-paper-20">    
-            <div class="margin"></div>
-            <div class="vx lc">
-                <img class="logo" src="img/home/logo-start.png" alt="SuitJS">
-                <div class="buttons hx lc">
-                    <a class="button-start" href="#">Get Started</a>
-                    <a class="button-start" href="#">Download</a>                    
-                </div>
-            </div>
-                          
-            <div class="margin"></div>
-        </div>
-        <div class="hx section about pattern-paper-10">
-            <div class="margin"></div>
-            <div class="hx">
-                <div>
-                    <div class="title">About SuitJS</div>
-                    <div class="hx ltc cols">
-                        <div class="col">                        
-                            <p class="col-title">Plain Simple</p>
-                            <ul>
-                                <li>Single script</li>
-                                <li>Easy Workflow</li>
-                                <li>Just name some elements and use a switch-case</li>
-                            </ul>                                
-                        </div>
-                        <div class="col">                        
-                            <p class="col-title">Comfortable</p>
-                            <ul>
-                                <li>Thin layer on top of vanilla js</li>
-                                <li>Don't demand extravagant concepts</li>
-                                <li>Offers the bare minimum to speed up development</li>
-                                <li>Don't force the use of all functionalities</li>
-                            </ul>                                                                                
-                        </div>
-                        <div class="col">                        
-                            <p class="col-title">Complete</p>
-                            <p>It covers the most important front-end tasks.</p>
-                            <ul>
-                                <li>Event handling</li>
-                                <li>Controllers communication</li>
-                                <li>Http requests</li>
-                                <li>DOM Manipulation</li>
-                            </ul>                                                
-                        </div>                                      
-                    </div>
-                </div>
-            </div>
-            <div class="margin"></div>
-        </div>
-        
-        <div class="hx section getstart pattern-paper-10">
-            <div class="margin"></div>
-            <div class="hx">
-                <div>                
-                    <div class="title">Getting Started</div>
-                    <p>README</p>
-                </div>           
-            </div>
-            <div class="margin"></div>
-        </div>
-        
-        <div class="hx footer pattern-paper-30">
-            <div class="margin"></div>            
-            <div class="hx ll">
-                <img class="logo" src="img/home/logo-footer.png" alt="SuitJS">
-                <div class="hx"></div>                
-                <a class="button-footer" href="#">Examples</a>                
-                <a class="button-footer" href="#">Documentation</a>                
-                <img class="github" src="img/home/logo-footer-github.png" alt="Github">
-            </div>
-            <div class="margin"></div> 
-        </div>
-    </div>
+<html class="no-js">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>SuitJS</title>
+		<link rel="icon" type="image/png" href="favicon.png">
+		<meta name="description" content="SuitJS a comfortable framework." />    
+		<meta name="keywords" content="javascript,framework,mvc,suitjs,haxe,typescript,indexeddb" />
+		<meta property="og:title" content="SuitJS"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="http://suitjs.com/img/logo-og-big.png"/>
+		<meta property="og:site_name" content="SuitJS"/>
+		<meta property="og:url" content="http://suitjs.com/"/>
+		<meta property="og:description" content="SuitJS a comfortable framework."/>    
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
-    <script async>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-75143185-1', 'auto');
-        ga('send', 'pageview');
-    </script>    
-</body>
+			ga('create', 'UA-75143185-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="wrap">
+				<h1><a href="#" title="Home">SuitJS</a></h1>
+				<nav>
+					<ul>
+						<li><a href="#about" title="About">About</a></li>
+						<li><a href="#getting-started" title="Getting Started">Getting Started</a></li>
+						<li><a href="http://suitjs.com/docs/" target="_blank" title="Documentation">Documentation</a></li>
+						<li class="github"><a href="https://github.com/suitjs/core" target="_blank" title="SuitJS on Github">SuitJS on Github</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section id="home">
+	<div class="wrap">
+		<div class="logo">
+			<h1>SuitJS</h1>
+			<h2>A comfortable MVC framework</h2>
+		</div>
+		<div class="buttons">
+			<a href="#getting-started" title="Getting Started">Getting Started</a>
+			<a href="#" title="Download SuitJS">Download SuitJS</a>
+		</div>
+	</div>
+</section>
+		<section id="about">
+	<div class="wrap">
+		<h1>About</h1>
+		<div class="columns">
+			<div class="column">
+				<h2>Plain Simple</h2>
+				<p>Single script framework with a very easy workflow, basically just name the elements and listen the events at a switch case.</p>
+			</div>
+			<div class="column">
+				<h2>Comfortable</h2>
+				<p>Thin layer on top of vanilla js, offers the bare minimum to speed up development and don't demand extravagant concepts or force the use of all functionalities.</p>
+			</div>
+			<div class="column">
+				<h2>Complete</h2>
+				<p>It covers the most important front-end tasks like, event handling, controllers communication, HTTP requests and DOM manipulation.</p>
+			</div>
+		</div>
+	</div>
+</section>
+		<section id="getting-started">
+	<div class="wrap">
+		<h1>Getting Started</h1>
+		<p>See more examples at <a href="http://codepen.io/collection/XOyEpq/" target="_blank">CodePen</a></p>
+		<iframe height='250' scrolling='no' src='//codepen.io/eduardo_costa/embed/jqmdXj/?height=265&amp;theme-id=light&amp;default-tab=html,result&amp;embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='http://codepen.io/eduardo_costa/pen/jqmdXj/'>[suitjs] hello world</a> by Eduardo Dias da Costa (<a href='http://codepen.io/eduardo_costa'>@eduardo_costa</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+	</div>
+</section>
+		
+		<footer>
+			<div class="wrap">
+				<a class="logo" href="#" title="Home">SuitJS</a>
+				<nav>
+					<ul>
+						<li><a href="#about" title="About">About</a></li>
+						<li><a href="#getting-started" title="Getting Started">Getting Started</a></li>
+						<li><a href="http://suitjs.com/docs/" target="_blank" title="Documentation">Documentation</a></li>
+						<li class="github"><a href="https://github.com/suitjs/core" target="_blank" title="SuitJS on Github">SuitJS on Github</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+		
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
 </html>
